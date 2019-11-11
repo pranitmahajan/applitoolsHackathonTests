@@ -1,0 +1,42 @@
+{
+  "name": "applitools-hackathon-tests",
+  "description": "Automation tests with WebdriverIO and Cucumber",
+  "scripts": {
+    "format-code": "eslint . --fix --quiet && prettier --write '**/*'",
+    "check-code": "eslint . && prettier --check \"**/*.js*\"",
+    "v1-traditional-tests": "wdio wdio.conf.js --url https://demo.applitools.com/hackathon.html --code traditionalTests",
+    "v2-traditional-tests": "wdio wdio.conf.js --url https://demo.applitools.com/hackathonV2.html --code traditionalTests",
+    "v1-visualAI-tests": "wdio wdio.conf.js --url https://demo.applitools.com/hackathon.html --code visualAITests --cucumberOpts.tagExpression='not @traditionalTestsOnly'",
+    "v2-visualAI-tests": "wdio wdio.conf.js --url https://demo.applitools.com/hackathonV2.html --code visualAITests --cucumberOpts.tagExpression='not @traditionalTestsOnly'"
+  },
+  "dependencies": {
+    "@applitools/eyes-selenium": "^4.31.16",
+    "@applitools/eyes-webdriverio": "^5.8.3",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "@types/cucumber": "^4.0.7",
+    "@types/node": "^12.11.2",
+    "@wdio/cli": "^5.15.2",
+    "@wdio/cucumber-framework": "^5.15.1",
+    "@wdio/local-runner": "^5.15.2",
+    "@wdio/selenium-standalone-service": "^5.15.0",
+    "@wdio/spec-reporter": "^5.15.2",
+    "@wdio/sync": "^5.15.1",
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.2",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "fibers": "^4.0.1",
+    "fs-extra": "^8.1.0",
+    "husky": "^3.0.9",
+    "multiple-cucumber-html-reporter": "^1.13.1",
+    "prettier": "^1.18.2",
+    "wdio-cucumberjs-json-reporter": "^1.1.1"
+  }
+}

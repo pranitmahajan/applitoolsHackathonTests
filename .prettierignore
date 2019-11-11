@@ -1,0 +1,14 @@
+.idea/*
+node_modules/*
+.tmp/*
+tests/features/*
+tests/testdata/*
+*/*.json
+./report/*
+*/.DS_Store
+.DS_Store
+.eslintignore
+.gitignore
+.npmrc
+.prettierignore
+startRun.sh

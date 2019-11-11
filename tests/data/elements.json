@@ -1,0 +1,30 @@
+{
+  "loginPage": {
+    "logo": ".logo-w img",
+    "header": ".auth-header",
+    "usernameIcon": ".os-icon-user-male-circle",
+    "usernameLabel": ".form-group:nth-child(1)>label",
+    "usernameInput": "#username",
+    "passwordIcon": ".os-icon-fingerprint",
+    "passwordLabel": ".form-group:nth-child(2)>label",
+    "passwordInput": "#password",
+    "loginButton": "#log-in",
+    "rememberMeCheckbox": ".form-check-input",
+    "rememberMeLabel": ".form-check-label",
+    "twitterIcon": "img[src$='twitter.png']",
+    "facebookIcon": "img[src$='twitter.png']",
+    "linkedInIcon": "img[src$='linkedin.png']",
+    "errorMsg": ".alert-warning"
+  },
+  "dashboardPage": {
+    "loggedUsername": ".logged-user-name",
+    "transactionTable": "#transactionsTable",
+    "amountHeader": "#amount",
+    "amountCells": "tr td:nth-child(5)",
+    "expensesLink": "#showExpensesChart",
+    "addDataSet": "#addDataset",
+    "barChart": "#canvas",
+    "ad1": "#flashSale img",
+    "ad2": "#flashSale2 img"
+  }
+}
