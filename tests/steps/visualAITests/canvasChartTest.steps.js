@@ -7,7 +7,7 @@ When(/^clicks user expenses link$/, () => {
     $(dashboardPage.elements.expensesLink).click();
 });
 
-Then(/^verify bar chart shows correct data as expected$/, async () => {    
+Then(/^verify bar chart shows correct data as expected$/, async () => {
     await eyes.checkElementBySelector(dashboardPage.elements.barChart);
 });
 
@@ -16,5 +16,5 @@ When(/^click on show date for next year$/, () => {
 });
 
 Then(/^verify new data is added to bar chart$/, async () => {
-  await eyes.checkElementBySelector(dashboardPage.elements.barChart);  
+    await eyes.checkElementBySelector(dashboardPage.elements.barChart);
 });

@@ -1,13 +1,17 @@
 ## Applitools Hackathon Tests Automation
 
-- This is complete optimise framework using BDD approach and effectively demoing use of applitools libs for visual AI tests, along with other functional actions.
+-   This is complete optimise framework using BDD approach and effectively demoing use of applitools libs for visual AI tests, along with other functional actions.
 
 ### For traditional tests:
+
 Framework is based on [WebDriverIO](http://webdriver.io/) and [Cucumber](https://cucumber.io/)
+
 #### Traditional test step definations are under /tests/steps/traditionalTests <br>
 
 ### For visual AI tests:
+
 Same webdriverio and cucumber framework is used, with addition of [Applitools](https://applitools.com/),for visual assertions instead of functional assertions.
+
 #### Visual AI test step definations are under /tests/steps/visualVITests <br>
 
 ## Requirements

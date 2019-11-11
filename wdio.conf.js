@@ -67,24 +67,24 @@ exports.config = {
         }
     },
 
-    async beforeScenario (uri, feature, scenario) {
-      // When using visual AI Tests appraoch
-      if (testApproach === 'visualAITests') {
-        configuration.setTestName(`${testName}-${scenario.name}`);
-        await eyes.open(browser);
-      }
+    async beforeScenario(uri, feature, scenario) {
+        // When using visual AI Tests appraoch
+        if (testApproach === 'visualAITests') {
+            configuration.setTestName(`${testName}-${scenario.name}`);
+            await eyes.open(browser);
+        }
     },
-    
+
     afterStep(uri, feature, result) {
         if (!result.passed)
             cucumberJson.attach(browser.takeScreenshot(), 'image/png');
     },
 
-    async afterScenario () {
-      // When using visual AI Tests appraoch
-      if (testApproach === 'visualAITests') {
-        await eyes.closeAsync();
-      }
+    async afterScenario() {
+        // When using visual AI Tests appraoch
+        if (testApproach === 'visualAITests') {
+            await eyes.closeAsync();
+        }
     },
 
     async after() {
