@@ -63,12 +63,28 @@ exports.config = {
             eyes.setApiKey(process.env.APPLITOOLS_API_KEY);
             eyes.setConfiguration(configuration);
             eyes.setForceFullPageScreenshot(true);
+            eyes.setBatch('Applitools Hackathon Tests', 'All Tests');
         }
     },
 
+    async beforeScenario (uri, feature, scenario) {
+      // When using visual AI Tests appraoch
+      if (testApproach === 'visualAITests') {
+        configuration.setTestName(`${testName}-${scenario.name}`);
+        await eyes.open(browser);
+      }
+    },
+    
     afterStep(uri, feature, result) {
         if (!result.passed)
             cucumberJson.attach(browser.takeScreenshot(), 'image/png');
+    },
+
+    async afterScenario () {
+      // When using visual AI Tests appraoch
+      if (testApproach === 'visualAITests') {
+        await eyes.closeAsync();
+      }
     },
 
     async after() {

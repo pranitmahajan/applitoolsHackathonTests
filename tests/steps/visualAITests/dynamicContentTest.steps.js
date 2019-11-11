@@ -7,7 +7,5 @@ Given(/^login page is opened with ads enabled$/, () => {
 });
 
 Then(/^verify 2 ads are present on page$/, async () => {
-    await eyes.open(browser);
     await eyes.check('Ads', Target.window());
-    await eyes.closeAsync();
 });

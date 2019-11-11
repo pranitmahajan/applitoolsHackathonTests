@@ -1,4 +1,4 @@
-/* global eyes, Target, configuration, testName */
+/* global eyes, Target */
 
 import { When, Then } from 'cucumber';
 import { loginPage } from '../../pages/loginPage';
@@ -15,12 +15,9 @@ When(/^login button is clicked$/, () => {
     $(loginPage.elements.loginButton).click();
 });
 
-Then(/^"([^"]*)" error is thrown$/, async (msg) => {
-    eyes.setBatch('Login Tests', 'Login Error Messages');
-    configuration.setTestName(`${testName}-${msg}`);
-    await eyes.open(browser);
+// eslint-disable-next-line no-unused-vars
+Then(/^"([^"]*)" error is thrown$/, async (m) => {
     await eyes.check('Login Window With Errors', Target.window());
-    await eyes.closeAsync();
 });
 
 When(
@@ -31,9 +28,5 @@ When(
 );
 
 Then(/^login is successfull$/, async () => {
-    eyes.setBatch('Login Tests', 'Login Error Messages');
-    configuration.setTestName(`${testName} - Succesfull Login`);
-    await eyes.open(browser);
     await eyes.check('Dashboard Page', Target.window());
-    await eyes.closeAsync();
 });

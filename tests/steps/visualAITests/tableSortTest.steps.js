@@ -10,10 +10,8 @@ When(/^amount header is clicked in Recent Transactions table$/, () => {
 Then(
     /^table must sort in ascending order of amount with data intact$/,
     async () => {
-        await eyes.open(browser);
         await eyes.checkElementBySelector(
             dashboardPage.elements.transactionTable,
         );
-        await eyes.closeAsync();
     },
 );
