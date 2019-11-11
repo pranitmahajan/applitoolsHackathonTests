@@ -4,13 +4,13 @@
 
 ### For traditional tests:
 Framework is based on [WebDriverIO](http://webdriver.io/) and [Cucumber](https://cucumber.io/)
-#### Traditional test step definations are under /tests/steps/traditionalTests
+#### Traditional test step definations are under /tests/steps/traditionalTests <br>
 
 ### For visual AI tests:
 Same webdriverio and cucumber framework is used, with addition of [Applitools](https://applitools.com/),for visual assertions instead of functional assertions.
-#### Visual AI test step definations are under /tests/steps/visualVITests
+#### Visual AI test step definations are under /tests/steps/visualVITests <br>
 
-#### Requirements
+## Requirements
 
 -   node >= 10.15.x - [how to install Node](https://nodejs.org/en/download/)
 
